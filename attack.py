@@ -1,17 +1,17 @@
 import requests
 
+
+# Open the file and read its lines
+with open("passwords.txt", "r") as file:
+    password_list = file.read().splitlines()  # Read each line and remove newline characters
+
+# Print the list to confirm
+print(password_list)
+
 # URL of the login page
 url = "http://127.0.0.1:5000/login"
 
-# A dictionary of common passwords to try
-password_list = [
-    "123456",
-    "password",
-    "admin",
-    "password123",
-    "qwerty",
-    "letmein",
-]
+
 
 # The username to brute force
 username = "admin"
